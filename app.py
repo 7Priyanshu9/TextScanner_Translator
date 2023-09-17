@@ -9,13 +9,16 @@ choice = input("Enter '1' to process a PDF or '2' to process an image: ")
 if choice == '1':
     # Process PDF
     poppler_path = r'C:\Program Files\poppler-23.08.0\Library\bin'
-    pdf_file_path = 'sample.pdf'
+    pdf_file_path = 'Sample2.pdf'
 
     images = convert_from_path(pdf_file_path, 500, poppler_path=poppler_path)
 
+    # Initialize a variable to keep track of page number
+    page_number = 1
+
     # Loop through the generated images
-    for i, image in enumerate(images):
-        image_path = f'page{i}.jpg'
+    for image in images:
+        image_path = f'page{page_number}.jpg'
         image.save(image_path, 'JPEG')
 
         # 2nd Code: Text Extraction and Translation
@@ -80,6 +83,9 @@ if choice == '1':
         # Print the translated text
         print("\nTranslated Text:")
         print(op.text)
+
+        # Increment the page number
+        page_number += 1
 
 elif choice == '2':
     # Process Image (2nd Code)
@@ -148,4 +154,5 @@ elif choice == '2':
 
 else:
     print("Invalid choice. Please enter '1' to process a PDF or '2' to process an image.")
+
 
