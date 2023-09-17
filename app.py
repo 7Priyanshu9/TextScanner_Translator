@@ -1,5 +1,3 @@
-
-
 import pytesseract
 from PIL import Image
 from googletrans import Translator
@@ -17,20 +15,19 @@ print(text)
 
 # Language selection menu
 print("\nSelect a language for translation:")
-print("1. Bengali ")
-print("2. Hindi ")
-print("3. Telugu ")
-print("4. Tamil ")
-print("5. Urdu ")
-print("6. Gujrati ")
-print("7. Kannada ")
-print("8. Malayalam ")
-print("9. Marathi)")
-print("10. Nepali ")
-print("11. Odia ")
-print("12. Punjabi ")
-print("13. Sindhi ")
-
+print("1. Bengali (bn)")
+print("2. Hindi (hi)")
+print("3. Telugu (te)")
+print("4. Tamil (ta)")
+print("5. Urdu (ur)")
+print("6. Gujrati (gu)")
+print("7. Kannada (kn)")
+print("8. Malayalam (ml)")
+print("9. Marathi (mr)")
+print("10. Nepali (ne)")
+print("11. Odia (or)")
+print("12. Punjabi (pa)")
+print("13. Sindhi (sd)")
 
 choice = input("Enter your choice (1/2/3/4/5/6/7/8/9/10/11/12/13): ")
 
